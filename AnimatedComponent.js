@@ -32,7 +32,6 @@ export default class AnimatedComponent extends Component {
     }
 
     _subscribe = () => {
-        // When invoked, the listener is provided a single argumument that is an object containing keys x, y, z.
         this._subscription = Accelerometer.addListener((accelerometerData) => {
             this.setState({accelerometerData});
             this.startScaleAnimation();
